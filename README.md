@@ -1,2 +1,2 @@
-# Project-Euler
-My solutions to Project Euler Problems
+# Project Euler
+Having fun with math programming problems.
