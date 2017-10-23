@@ -8,3 +8,6 @@ def product(s):
 	for c in s:
 		result *= int(c)
 	return result
+
+res = max(product(n[i : i + adj]) for i in range(len(n) - adj + 1))
+print(res)
