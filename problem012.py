@@ -19,12 +19,12 @@ def num_divisors(n):
         p += 2
     return divisors
  
-def find_triangular_index(factor_limit):
+def find_triangular_index(factors):
     n = 1
-    lnum, rnum = num_divisors(n), num_divisors(n+1)
-    while lnum * rnum < 500:
+    num1, num2 = num_divisors(n), num_divisors(n+1)
+    while num1 * num2 < 500:
         n += 1
-        lnum, rnum = rnum, num_divisors(n+1)
+        num1, num2 = num2, num_divisors(n+1)
     return n
  
 index = find_triangular_index(500)
