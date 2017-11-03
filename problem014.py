@@ -23,19 +23,21 @@
 #             if new_length > max_length[1]: max_length = [i,new_length]
 # print(max_length[0])
 
-memo = {}                               # initialize the memo dictionary
-def collatz_seq(n):
-    if not n in memo:                   # check if already computed
-        if n == 1:                      # if not compute it
-            memo[n] = 1                 # cache it
-        elif n % 2 == 0:
-            memo[n] = collatz_seq(n // 2) + 1
+def k(upto):
+    def collatz(n):
+        if n < upto and lst[n] > 0:
+            return lst[n]
+        if n % 2 == 0:
+            val = collatz(n/2) + 1
         else:
-            memo[n] = collatz_seq(3*n + 1) + 1
-    return memo[n]                      # and return it
+            val = collatz((3*n + 1)/2) + 2
+        if n < upto:
+            lst[n] = val
+        return val
 
-def main():
-	print(collatz_seq(1000000))
-
-if __name__ == '__main__':
-    main()
+    lst = [0]*upto
+    lst[1] = 1
+    lst[0] = 1
+    for i in range(upto):
+        collatz(i)
+    return max(lst)
