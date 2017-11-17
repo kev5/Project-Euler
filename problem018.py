@@ -1,9 +1,5 @@
 # Copyright 2017 Keval Khara kevalk@bu.edu
 
-for i in reversed(range(len(triangle) - 1)):
-	for j in range(len(triangle[i])):
-		triangle[i][j] += max(triangle[i + 1][j], triangle[i + 1][j + 1])
-
 triangle = [  
 	[75],
 	[95,64],
@@ -22,4 +18,8 @@ triangle = [
 	[ 4,62,98,27,23, 9,70,98,73,93,38,53,60, 4,23],
 ]
 
-print(str(triangle[0][0]))
+for i in reversed(range(len(triangle) - 1)):	# Going from bottom to top
+	for j in range(len(triangle[i])):
+		triangle[i][j] += max(triangle[i + 1][j], triangle[i + 1][j + 1])
+
+print(str(triangle[0][0]))	# The first element of the matrix would be the max sum
