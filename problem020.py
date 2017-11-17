@@ -12,3 +12,11 @@ def sum_digits(n):
 sum = sum_digits(factorial(100))
 
 print(sum)
+
+'''
+We can also write a 2-line code for this problem:
+
+from math import factorial
+print(sum(int(c) for c in str(factorial(100))))
+
+'''
