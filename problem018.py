@@ -1,10 +1,8 @@
 # Copyright 2017 Keval Khara kevalk@bu.edu
 
-def maxsum():
-	for i in reversed(range(len(triangle) - 1)):
-		for j in range(len(triangle[i])):
-			triangle[i][j] += max(triangle[i + 1][j], triangle[i + 1][j + 1])
-	return str(triangle[0][0])
+for i in reversed(range(len(triangle) - 1)):
+	for j in range(len(triangle[i])):
+		triangle[i][j] += max(triangle[i + 1][j], triangle[i + 1][j + 1])
 
 triangle = [  
 	[75],
@@ -24,6 +22,4 @@ triangle = [
 	[ 4,62,98,27,23, 9,70,98,73,93,38,53,60, 4,23],
 ]
 
-
-if __name__ == "__main__":
-	print(maxsum)
+print(str(triangle[0][0]))
