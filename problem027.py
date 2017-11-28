@@ -3,15 +3,15 @@
 import eulerlib, itertools
 
 
-def count_consecutive_primes(ab):
+def count_primes(ab):
 	a, b = ab
 	for i in itertools.count():
-		n = i * i + i * a + b
+		n = (i * i) + (i * a) + b
 		if not is_prime(n):
 			return i
 
 
-isprime = eulerlib.primes(1000)
+isprime = eulerlib.primes(1000)		# Get a list of all primes less than 1000
 
 
 def is_prime(n):
@@ -24,5 +24,5 @@ def is_prime(n):
 
 
 ans = max(((a, b) for a in range(-999, 1000) for b in range(2, 1000)),
-		key=count_consecutive_primes)
+		key=count_primes)
 print(str(ans[0] * ans[1]))
