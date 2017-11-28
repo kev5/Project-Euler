@@ -5,7 +5,7 @@ from itertools import count
 def reciprocal_cycle(n):
 	res = {}
 	x = 1
-	for d in count():	# itertools.count need not have a range
+	for d in count():
 		if x in res:
 			return d - res[x]
 		else:
