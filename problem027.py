@@ -1,11 +1,12 @@
 # Copyright 2017 Keval Khara kevalk@bu.edu
 
-import eulerlib, itertools
+import eulerlib
+from itertools import count
 
 
 def count_primes(ab):
 	a, b = ab
-	for i in itertools.count():
+	for i in count():
 		n = (i * i) + (i * a) + b
 		if not is_prime(n):
 			return i
