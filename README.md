@@ -1,2 +1,2 @@
 # Project Euler
-Having fun with math programming problems.
+Solving programming problems with a mathematical approach and learning how to write efficient code.
