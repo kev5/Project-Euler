@@ -14,4 +14,8 @@ the bottom left corner has the value n^2 - 2(n - 1), and the bottom right is n^2
 Putting it all together, all the four corners contribute 4n^2 - 6(n - 1) to the final sum.
 '''
 
-
+size = 1001   # Always Odd
+ans = 1       # For size 1
+for i in range(3, size + 1, 2):
+	ans += 4 * i * i - 6 * (i-1)
+print(str(ans))
