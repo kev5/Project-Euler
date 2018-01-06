@@ -1,8 +1,5 @@
 # Copyright 2017 Keval Khara kevalk@bu.edu
 
-
-# Copyright 2017 Keval Khara kevalk@bu.edu
-
 TOTAL = 200
 
 # At the start of each loop iteration, ways[i] is the number of ways to use
