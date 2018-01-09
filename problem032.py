@@ -11,5 +11,5 @@ def pandigital_product(n):
 				return True
 	return False
 
-ans = sum(i for i in range(1, 10000) if pandigital_product(i))
+ans = sum(num for num in range(1, 10000) if pandigital_product(num))
 print(ans)
