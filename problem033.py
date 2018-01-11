@@ -2,6 +2,14 @@
 
 from fractions import gcd
 
+'''
+ Let num = 10 * n1 + n0 be the numerator.
+ Let den = 10 * d1 + d0 be the denominator.
+ 
+ As stated in the problem, we need 10 <= n < d < 100.
+ Also, we must disregard trivial simplifications where n0 = d0 = 0.
+'''
+
 num = 1
 den = 1
 for d in range(10, 100):
