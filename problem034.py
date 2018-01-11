@@ -1,9 +1,8 @@
-
 # Copyright 2018 Keval Khara kevalk@bu.edu
 
 from math import factorial as fact
 
-
+# Storing factorials of numbers from 0-9
 f = [fact(0),
 fact(1),
 fact(2),
@@ -15,7 +14,7 @@ fact(7),
 fact(8),
 fact(9)]
 
-
+# Sum of factorials of the digits
 def factorial_digits(n):
 	digit = 0
 	while n:
