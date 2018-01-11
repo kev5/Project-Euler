@@ -13,4 +13,5 @@ for d in range(10, 100):
 		if (n1 == d0 and n0 * d == n * d1) or (n0 == d1 and n1 * d == n * d0):
 			num *= n
 			den *= d
+
 print(den // gcd(num, den))
