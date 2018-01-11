@@ -1,7 +1,5 @@
 # Copyright 2018 Keval Khara kevalk@bu.edu
 
-# Copyright 2018 Keval Khara kevalk@bu.edu
-
 from fractions import gcd
 
 num = 1
