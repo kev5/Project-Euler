@@ -1,6 +1,6 @@
 # Copyright 2018 Keval Khara kevalk@bu.edu
 
-import math
+from math import sqrt
 
 
 def primeSieve(sieveSize):
@@ -11,7 +11,7 @@ def primeSieve(sieveSize):
 	sieve[1] = False
 
 	# Create the sieve
-	for i in range(2, int(math.sqrt(sieveSize)) + 1):
+	for i in range(2, int(sqrt(sieveSize)) + 1):
 		pointer = i * 2
 		while pointer < sieveSize:
 			sieve[pointer] = False
@@ -23,3 +23,5 @@ def primeSieve(sieveSize):
 		if sieve[i] == True:
 			primes.append(i)
 	return primes
+
+print(primeSieve(1000000))
