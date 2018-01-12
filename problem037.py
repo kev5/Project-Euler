@@ -1,5 +1,12 @@
 # Copyright 2018 Keval Khara kevalk@bu.edu
 
+'''
+We use regular expressions to increase the efficiency of
+our code since the numbers with even digits can be
+skipped as we know they won't be prime while truncating
+the digits
+'''
+
 import re
 from math import sqrt
 
