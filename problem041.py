@@ -1,7 +1,5 @@
 # Copyright 2018 Keval Khara kevalk@bu.edu
 
-# Copyright 2018 Keval Khara kevalk@bu.edu
-
 def is_pandigital(n, s=9):
 	n=str(n)
 	return len(n)==s and not '1234567890'[:s].strip(n)
