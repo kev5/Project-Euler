@@ -14,6 +14,18 @@ last-minute check whenever we find two "matching" files where we actually scan t
 
 2. The most recently edited file is the duplicate: This seems reasonable, but it might be wrong—for example, there might be
 files which have been edited by daemons (programs that run in the background) after our friend finished duplicating them.
+
+3. Two files with the same contents are the same file. This seems trivially true, but it could cause some problems.
+For example, we might have empty files in multiple places in our file system that aren't duplicates of each-other.
+
+Complexity:
+
+Each "fingerprint" takes O(1)O(1) time and space, so our total time and space costs are O(n) where n is the number of files
+on the file system.
+
+If we add the last-minute check to see if two files with the same fingerprints are actually the same files (which we probably should),
+then in the worst case all the files are the same and we have to read their full contents to confirm this, giving us a runtime
+that's order of the total size of our files on disc.
 '''
 
 import os
