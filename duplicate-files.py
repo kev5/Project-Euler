@@ -1,3 +1,21 @@
+'''
+We walk through our whole file system iteratively. As we go, we take a "fingerprint" of each file in constant time
+by hashing the first few, middle few, and last few bytes. We store each file's fingerprint in a dictionary as we go.
+
+If a given file's fingerprint is already in our dictionary, we assume we have a duplicate. In that case, we assume
+the file edited most recently is the duplicate one.
+
+We've made a few assumptions here:
+
+1. Two different files won't have the same fingerprints: It's not impossible that two files with different contents will
+have the same beginning, middle, and end bytes so they'll have the same fingerprints. Or they may even have different
+sample bytes but still hash to the same value (this is called a "hash collision"). To mitigate this, we could do a
+last-minute check whenever we find two "matching" files where we actually scan the full file contents to see if they're the same.
+
+2. The most recently edited file is the duplicate: This seems reasonable, but it might be wrong—for example, there might be
+files which have been edited by daemons (programs that run in the background) after our friend finished duplicating them.
+'''
+
 import os
 import hashlib
 
