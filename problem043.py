@@ -1,5 +1,4 @@
 # Copyright 2018 Keval Khara kevalk@bu.edu
-# Copyright 2018 Keval Khara kevalk@bu.edu
 
 from itertools import permutations
 
@@ -7,7 +6,7 @@ from itertools import permutations
 p = permutations('0123456789')
 
 # variable to store the value of sum
-solution = 0
+ans = 0
 
 # for loop to loop through permutations
 for i in p:
@@ -18,6 +17,6 @@ for i in p:
         int(''.join(i[3:6])) % 5 == 0 and
         int(''.join(i[2:5])) % 3 == 0 and
         int(''.join(i[1:4])) % 2 == 0):
-        solution += int(''.join(i))
+        ans += int(''.join(i))
 
-print(solution)
+print(ans)
