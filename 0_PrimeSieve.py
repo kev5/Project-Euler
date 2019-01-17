@@ -11,7 +11,7 @@ def primeSieve(sieveSize):
 	sieve[1] = False
 
 	# Create the sieve
-	for i in range(2, int(sqrt(sieveSize)) + 1):
+	for i in range(3, int(sieveSize ** 0.5) + 1, 2):
 		pointer = i * 2
 		while pointer < sieveSize:
 			sieve[pointer] = False
@@ -19,9 +19,11 @@ def primeSieve(sieveSize):
 
 	# Compile the list of primes
 	primes = []
-	for i in range(sieveSize):
+	for i in range(3, sieveSize, 2):
 		if sieve[i] == True:
 			primes.append(i)
+
 	return primes
+
 
 print(primeSieve(1000000))
